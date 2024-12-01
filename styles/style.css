@@ -69,7 +69,7 @@ button:disabled {
 
 .header_title {
   margin-block-end: 40px;
-  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vi, 7.5rem);
 }
 
 .header__menu {
@@ -101,6 +101,7 @@ button:disabled {
 
 .header__theme-button:hover {
   text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
 }
 
 .header__theme-button_is-active {
@@ -113,7 +114,7 @@ button:disabled {
   z-index: -1;
   inline-size: calc(100% + 8px);
   block-size: 0.5ch;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #ffab6b);
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
 }
@@ -133,6 +134,12 @@ button:disabled {
 
 .content__text-block a {
   color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.content__text-block a:hover {
+  border-bottom-color: color-mix(in srgb, currentColor 50%, transparent);
 }
 
 .content__blockquote {
@@ -176,7 +183,7 @@ button:disabled {
   padding: 0 4px;
   font-weight: 700;
   font-size: 30px;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #ffab6b);
 }
 
 .content__picture {
@@ -226,7 +233,7 @@ button:disabled {
   z-index: -1;
   inline-size: calc(100% + 8px);
   block-size: 0.5ch;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #ffab6b);
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
 }
